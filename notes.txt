@@ -1,0 +1,29 @@
+What do we want to get from the data? 
+
+type in a city, get the current conditions
+
+
+if you type in something that doesn't match exactly, i want to still be able to find it. 
+
+ex. london, england -> still gets london
+london: 
+london
+london,england
+
+
+'http://localhost:8080/34c81de56ca1c3bfea9e.png'
+
+"url("http://localhost:8080/34c81de56ca1c3bfea9e.png")"
+
+function toCSSURL(url){
+    return `url(${url})`;
+}
+
+'url("http://localhost:8080/34c81de56ca1c3bfea9e.png")'
+
+
+
+Things to Fix: 
+
+-sizing on the background image
+-new positions and design on the results

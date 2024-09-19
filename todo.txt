@@ -1,0 +1,39 @@
+
+
+
+To Do: 
+
+- account for different length names of cities and length curent conditions desciptions
+
+- small window format 
+
+- mobile friendly format
+
+<div class="main-container" style="background-image: url(&quot;./backgrounds/sunset-bespin.png&quot;);">
+        <div class="today-header">Today's Date</div>
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search for your city here.">
+            <button class="search-btn">Search</button>
+
+        </div>
+
+        <div class="todays-weather-container">
+            <div class="todays-weather-location">New York, NY, United States</div>
+            <img class="todays-icon-container">
+            <div class="current-temp">21.7 C°</div>
+            <div class="low-box">
+                <p class="low">23.9</p>
+                <p>low</p>
+            </div>
+            <div class="high-box">
+                <p class="high">20.5</p>
+                <p>high</p>
+            </div>
+            <div class="current-conditions">Similar temperatures continuing with a chance of rain tomorrow.</div>
+            
+
+        </div> 
+        <div class="upcoming-container">
+            This is where the upcoming 7 days weahter info will be
+        </div>
+    </div>

@@ -4,10 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>Star Wars Weather</title>
 </head>
 
 <body>
+    <div class="main-container">
+        <div class="header">
+            <div class="today-header">Today's Date</div>
+            <input type="text" class="search-bar" placeholder="Search for your city here." />
+            <button class="search-btn">Search</button>
+
+
+        </div>
+        <section class="middle-section">
+            <div class="todays-weather-container">
+                <div class="weather-container-header">
+                    <div class="todays-weather-location"></div>
+                    <div class="todays-weather-localtime"></div>
+                </div>
+                <div class="weather-container-second-row">
+                    <img class="todays-icon-container">
+                    <div class="current-temp"></div>
+                    <div class="high-low-box">
+                        <div class="high-box">
+                            <p>high</p>
+                            <p class="high"></p>
+                        </div>
+
+                        <div class="low-box">
+                            <p>low</p>
+                            <p class="low"></p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- <div class="current-temp-container"> -->
+
+                <button class="convert-temp-btn">Convert To C/F</button>
+                <!-- </div> -->
+
+
+                <div class="current-conditions">cloudy with a chance of meatballs</div>
+
+
+            </div>
+        </section>
+        <div class="upcoming-container">
+            This is where the upcoming 7 days weahter info will be
+        </div>
+    </div>
 </body>
 
 </html>

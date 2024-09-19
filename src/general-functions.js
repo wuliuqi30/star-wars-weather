@@ -1,0 +1,21 @@
+import { isAfter,isMatch, isValid } from "date-fns";
+
+function getDate(vizCrossingdate){
+
+    // '06:37:12'
+    const hr = vizCrossingdate.slice(0,2);
+
+    const minute = vizCrossingdate.slice(3,5);
+
+    const second = vizCrossingdate.slice(6,8);
+
+    const now = new Date();
+    return new Date(now.getFullYear(),now.getMonth(),now.getDate(),hr,minute,second)
+
+}
+
+function toCSSURL(url){
+    return `url("${url}")`;
+}
+
+export {getDate,toCSSURL}
