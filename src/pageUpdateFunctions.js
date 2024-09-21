@@ -60,7 +60,7 @@ function updateScreen(weatherObject) {
 
     // Humidity: 
     const wetPoint = 75;
-    const dryPoint = 40;
+    const dryPoint = 30;
     let humiditySetting = 0;
     console.log(`humidity is ${weatherObject.humidity}, range is dry < ${dryPoint}, wet > ${wetPoint} `)
     if (weatherObject.humidity < dryPoint) {
@@ -201,11 +201,15 @@ function updateScreen(weatherObject) {
     locationInfoDOM.textContent = weatherObject.fullName;
 
     const localTimeInfoDOM = document.querySelector('.todays-weather-localtime');
-    localTimeInfoDOM.textContent = format(weatherObject.datetime,'p');
+    localTimeInfoDOM.textContent = `Local Time: ${format(weatherObject.datetime,'p')}`;
 
 
     const currTempDOM = document.querySelector('.current-temp');
     currTempDOM.textContent = weatherObject.temp + tempUnits;
+
+    const currConditionsDOM = document.querySelector('.current-conditions');
+    currConditionsDOM.textContent = weatherObject.conditions;
+
 
     const lowDOM = document.querySelector('.high');
     lowDOM.textContent = weatherObject.high + degreeSymbol;
@@ -213,8 +217,11 @@ function updateScreen(weatherObject) {
     const highDOM = document.querySelector('.low');
     highDOM.textContent = weatherObject.low + degreeSymbol;
 
-    const currConditionsDOM = document.querySelector('.current-conditions');
-    currConditionsDOM.textContent = weatherObject.description;
+    const humidityDOM = document.querySelector('.humidity');
+    humidityDOM.textContent = weatherObject.humidity + '%';
+
+    const currDescriptionDOM = document.querySelector('.current-description');
+    currDescriptionDOM.textContent = weatherObject.description;
 
 
 }

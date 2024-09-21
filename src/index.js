@@ -82,4 +82,4 @@ async function getWeatherFromSite(units, cityName) {
 // Onload
 
 
-getWeatherFromSite(units,'Eureka, Nunavut, Canada')
+getWeatherFromSite(units,'syracuse, new york')

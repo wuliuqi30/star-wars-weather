@@ -11,9 +11,10 @@
     <div class="main-container">
         <div class="header">
             <div class="today-header">Today's Date</div>
+            
             <input type="text" class="search-bar" placeholder="Search for your city here." />
             <button class="search-btn">Search</button>
-
+            <button class="convert-temp-btn">Convert C/F</button>
 
         </div>
         <section class="middle-section">
@@ -24,16 +25,25 @@
                 </div>
                 <div class="weather-container-second-row">
                     <img class="todays-icon-container">
-                    <div class="current-temp"></div>
+                    <div class="temp-and-conditions-container">
+                        <div class="current-temp"></div>
+                        <div class="current-conditions"></div>
+                    </div>
+                    
                     <div class="high-low-box">
-                        <div class="high-box">
-                            <p>high</p>
+                        <div class="condition-row">
+                            <p>High:</p>
                             <p class="high"></p>
                         </div>
 
-                        <div class="low-box">
-                            <p>low</p>
+                        <div class="condition-row">
+                            <p>Low:</p>
                             <p class="low"></p>
+                            
+                        </div>
+                        <div class="condition-row">
+                            <p>Rel Humidity:</p>
+                            <p class="humidity"></p>
                             
                         </div>
                     </div>
@@ -42,11 +52,11 @@
 
                 <!-- <div class="current-temp-container"> -->
 
-                <button class="convert-temp-btn">Convert To C/F</button>
+                
                 <!-- </div> -->
 
 
-                <div class="current-conditions">cloudy with a chance of meatballs</div>
+                <div class="current-description">cloudy with a chance of meatballs</div>
 
 
             </div>
