@@ -18,7 +18,7 @@ class Weather{
         this.datetime = getDate(data.currentConditions.datetime);
         this.sunset = getDate(data.currentConditions.sunset);
         this.sunrise = getDate(data.currentConditions.sunrise);
-
+        this.similarToPlanet = null;
         
         this.units = unitsType;
         switch(this.units){

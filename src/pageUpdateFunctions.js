@@ -135,17 +135,21 @@ function updateScreen(weatherObject) {
                 switch (precipitationSetting) {
                     case 'rain':
                         middleSection.style.backgroundImage = toCSSURL(BACKGROUNDS.DAY_RAIN);
+                        weatherObject.similarToPlanet = 'Ahch-To';
                         break;
                     case 'clouds':
                         middleSection.style.backgroundImage = toCSSURL(BACKGROUNDS.DAY_PARTLY_CLOUDY);
+                        weatherObject.similarToPlanet = 'Naboo';
                         break;
                     default:
                         switch (humiditySetting) {
                             case 'dry':
                                 middleSection.style.backgroundImage = toCSSURL(BACKGROUNDS.DAY_DRY);
+                                weatherObject.similarToPlanet = 'Tatooine';
                                 break;
                             default:
                                 middleSection.style.backgroundImage = toCSSURL(BACKGROUNDS.DAY_CLEAR);
+                                weatherObject.similarToPlanet = 'Naboo';
                         }
 
                 }
@@ -153,10 +157,11 @@ function updateScreen(weatherObject) {
                 switch (precipitationSetting) {
                     case 'snow':
                         middleSection.style.backgroundImage = toCSSURL(BACKGROUNDS.DAY_FREEZING_SNOW);
-                        
+                        weatherObject.similarToPlanet = 'Unknown';
                         break;
                     default:
                         middleSection.style.backgroundImage = toCSSURL(BACKGROUNDS.DAY_FREEZING_CLEAR);
+                        weatherObject.similarToPlanet = 'Hoth';
                 }
                 break;
             }
@@ -164,6 +169,7 @@ function updateScreen(weatherObject) {
         case 'sunset':
             body.className = 'light';
             middleSection.style.backgroundImage = toCSSURL(BACKGROUNDS.SUNSET_PARTLY_CLOUDY);
+            weatherObject.similarToPlanet = 'Bespin';
             break;
         case 'night':
             body.className = 'dark';
@@ -171,14 +177,17 @@ function updateScreen(weatherObject) {
                 switch (precipitationSetting) {
                     case 'rain':
                         middleSection.style.backgroundImage = toCSSURL(BACKGROUNDS.NIGHT_RAIN);
+                        weatherObject.similarToPlanet = 'Kamino';
                         break;
                     default:
                         switch (humiditySetting) {
                             case 'wet':
                                 middleSection.style.backgroundImage = toCSSURL(BACKGROUNDS.NIGHT_CLEAR_HUMID);
+                                weatherObject.similarToPlanet = 'Dagobah';
                                 break;
                             default:
                                 middleSection.style.backgroundImage = toCSSURL(BACKGROUNDS.NIGHT_CLEAR);
+                                weatherObject.similarToPlanet = 'Kashyyk';
                         }
 
                 }
@@ -186,9 +195,11 @@ function updateScreen(weatherObject) {
                 switch (precipitationSetting) {
                     case 'snow':
                         middleSection.style.backgroundImage = toCSSURL(BACKGROUNDS.NIGHT_FREEZING_SNOW);
+                        weatherObject.similarToPlanet = 'Unknown';
                         break;
                     default:
                         middleSection.style.backgroundImage = toCSSURL(BACKGROUNDS.NIGHT_FREEZING_CLEAR);
+                        weatherObject.similarToPlanet = 'Hoth';
                 }
                 break;
             }
@@ -223,6 +234,8 @@ function updateScreen(weatherObject) {
     const currDescriptionDOM = document.querySelector('.current-description');
     currDescriptionDOM.textContent = weatherObject.description;
 
+    const similarToDOM = document.querySelector('.weather-like');
+    similarToDOM.textContent = `Conditions most similar to ${weatherObject.similarToPlanet}.`;
 
 }
 
