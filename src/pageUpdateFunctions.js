@@ -245,7 +245,7 @@ function updateScreen(weatherObject) {
 
     // Upcoming weather section: 
     const futureWeatherContainer = document.querySelector('.upcoming-container');
-
+    futureWeatherContainer.innerHTML = '';
     for (let d = 1; d < 8; d++) {
         const dayDOM = document.createElement('div');
         dayDOM.classList.add('future-weather-box');
