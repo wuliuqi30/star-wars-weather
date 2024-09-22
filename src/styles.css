@@ -59,7 +59,7 @@ h6 {
 
 :root {
     font-size: 12px;
-
+    --font-size-tiny: .5rem;
     --font-size-small: 1rem;
     --font-size-medium: 1.5rem;
     --font-size-large: 1.7rem;
@@ -69,9 +69,11 @@ h6 {
 
 
     --big-icon-side-length: 100px;
+    --small-icon-side-length: 33px;
     --search-section-length: calc(1.5 * var(--big-icon-side-length));
 
     --standard-gap: 10px;
+    --small-container-gap: 3px;
 
 
     --general-padding: 20px;
@@ -85,6 +87,7 @@ h6 {
 
     white-space: nowrap;
     --general-border-radius: 15px;
+    --future-weather-padding: 8px;
 
 
 }
@@ -146,7 +149,7 @@ body {
 
     background-color: var(--primary-background-color);
     /* background-image: url("./backgrounds/sunset-bespin.png"); */
-    height: 80vh;
+    height: 88vh;
 
 }
 
@@ -222,17 +225,19 @@ body {
 
 .middle-section {
     width: 100%;
-    height: 70vh;
+    height: 60vh;
     border-radius: var(--general-border-radius);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: var(--standard-gap);
 
     background-position: 0 center;
     background-repeat: no-repeat;
     background-size: cover;
 
-    position: relative;
+   
 }
 
 
@@ -352,7 +357,7 @@ body {
 
 
 .condition-row {
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-medium);
     /* border: 2px solid black; */
 
     display: flex;
@@ -397,33 +402,76 @@ body {
 
 
 
-.upcoming-container {
-    display: flex;
-    border: 2px solid black;
 
-    /* height: 20vh; */
-    background-color: var(--primary-background-color);
-}
-
-.upcoming-day {
-    height: 100px;
-    width: 50px;
-}
 
 .weather-like{
-    position: absolute;
-    /* width: 150px; */
+   
     
     border-radius: var(--general-border-radius);
     padding: var(--button-padding);
     font-size: var(--font-size-medium);
-    top: 90%;
-    left: 70%;
+    
+   
+
     border: 3px solid black;
     
     background-color:  var(--primary-background-color);
     color: var(--primary-font-color);
 }
+
+.upcoming-container {
+    display: flex;
+    /* border: 2px solid black; */
+    width: 100%;
+    justify-content: space-around;
+
+    gap: 13px;
+    padding: 10px;
+
+    /* height: 20vh; */
+    background-color: var(--primary-background-color);
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.future-weather-box {
+    height: 100px;
+    /* width: 75px; */
+    font-size: var(--font-size-small);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--small-container-gap);
+    border: 2px solid var(--primary-font-color);
+    border-radius: var(--general-border-radius);
+    padding: var(--future-weather-padding);
+
+    color: var(--primary-font-color);
+}
+
+.future-weather-box .condition-row{
+    font-size: inherit;
+}
+
+.small-icon{
+   
+
+    width: var(--small-icon-side-length);
+    height: var(--small-icon-side-length);
+
+    /* border: 2px solid black; */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    flex: 0 0 auto;
+
+    background-color: white;
+
+}
+
 
 @media (max-width: 425px) {
     :root {
@@ -556,8 +604,7 @@ body {
        
         padding: 3px;
         font-size: var(--font-size-medium);
-        top: 90%;
-        left: 26%;
+        
         
     }
     

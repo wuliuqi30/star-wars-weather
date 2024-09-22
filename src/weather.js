@@ -1,4 +1,4 @@
-import {getDate} from "./general-functions.js"
+import {getTime} from "./general-functions.js"
 
 class Weather{
 
@@ -15,9 +15,9 @@ class Weather{
         this.description = data.description;
         this.days = data.days;
 
-        this.datetime = getDate(data.currentConditions.datetime);
-        this.sunset = getDate(data.currentConditions.sunset);
-        this.sunrise = getDate(data.currentConditions.sunrise);
+        this.datetime = getTime(data.currentConditions.datetime);
+        this.sunset = getTime(data.currentConditions.sunset);
+        this.sunrise = getTime(data.currentConditions.sunrise);
         this.similarToPlanet = null;
         
         this.units = unitsType;
