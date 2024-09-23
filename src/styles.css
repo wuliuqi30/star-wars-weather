@@ -61,7 +61,7 @@ h6 {
     font-size: 12px;
     --font-size-tiny: .5rem;
     --font-size-small: 1rem;
-    --font-size-medium: 1.5rem;
+    --font-size-medium: 1.3rem;
     --font-size-large: 1.7rem;
     --font-size-jumbo: 4rem;
 
@@ -184,13 +184,16 @@ body {
     font-size: var(--font-size-jumbo);
     text-align: center;
 
-    /* padding: var(--general-padding); */
-
-    /* border: 2px solid black; */
-
     background-color: var(--primary-background-color);
     color: var(--primary-font-color);
     white-space: nowrap;
+}
+
+.search-convert-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--standard-gap);
 }
 
 .convert-temp-btn {
@@ -317,7 +320,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    align-items: center;
 }
 
 .current-conditions {
@@ -331,6 +334,7 @@ body {
 
     /* border: 2px solid black; */
     background-color: var(--primary-background-color);
+
 }
 
 
@@ -340,6 +344,7 @@ body {
 
     /* margin-right:auto; */
     justify-content: center;
+    align-items: center;
 }
 
 /* .low-box {
@@ -436,9 +441,9 @@ body {
 }
 
 .future-weather-box {
-    height: 100px;
+    /* height: 100px; */
     /* width: 75px; */
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-medium);
     display:flex;
     justify-content: center;
     align-items: center;
@@ -515,19 +520,16 @@ body {
         height: 150px;
     }
 
+
     .convert-temp-btn {
-
-       
         width: 100px;
-
     }
 
 
     .search-bar {
         margin-left: inherit;
         width: 200px;
-     
-
+    
 
     }
 
@@ -588,16 +590,19 @@ body {
         gap: 6px;
     }
 
+    .high-low-box{
+        font-size: var(--font-size-large);
+    }
+
     
     
 
     .condition-row {
        
         justify-content: space-around;
-    
 
 
-      
+        font-size: var(--font-size-large);
     }
 
 
@@ -606,10 +611,13 @@ body {
         /* height: 40px; */
        
         padding: 3px;
-        font-size: var(--font-size-medium);
+        font-size: var(--font-size-large);
         
         
     }
-    
+    .future-weather-box {
+        height: 130px;
+        font-size: var(--font-size-large);
+    }
 
 }
